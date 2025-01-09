@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://brhxe6qt51o5j"
+path="res://.godot/imported/1944c61d-1225-4500-8e72-2dd53bcbaa84.jpg-00ea96a4ac8ed30b61c66beee108536b.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Sprite Pack 8/1944c61d-1225-4500-8e72-2dd53bcbaa84.jpg"
+dest_files=["res://.godot/imported/1944c61d-1225-4500-8e72-2dd53bcbaa84.jpg-00ea96a4ac8ed30b61c66beee108536b.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
