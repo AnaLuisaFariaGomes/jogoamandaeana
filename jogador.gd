@@ -37,11 +37,11 @@ func _physics_process(delta: float) -> void:
 			anim.play("parado")
 		else:
 			anim.play("pulando")
-	if position.y > 80:
+	if position.y > 150:
 		anim.play("morrer")
 	if position.y > 800:
 		position.y = -10
-		position.x = 300
+		position.x = 50
 	move_and_slide()
 
 
