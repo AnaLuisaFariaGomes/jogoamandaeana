@@ -1,34 +1,34 @@
 [gd_scene load_steps=21 format=3 uid="uid://cmdjniftg76iv"]
 
 [ext_resource type="Script" path="res://jogador.gd" id="1_1ctiq"]
-[ext_resource type="Texture2D" uid="uid://d0xitkt5mbwbh" path="res://Sprite Pack 8/2 - Tracy/Run (32 x 32).png" id="2_h76ij"]
+[ext_resource type="Texture2D" uid="uid://b1ck5j0x5b14m" path="res://gato/gatooooo.png" id="2_ldbj4"]
 [ext_resource type="Texture2D" uid="uid://ck7npncodddpu" path="res://Sprite Pack 8/2 - Tracy/Hurt (32 x 32).png" id="3_bvrge"]
 [ext_resource type="Texture2D" uid="uid://genenfqbkhi3" path="res://Sprite Pack 8/2 - Tracy/Idle_1 (32 x 32).png" id="4_sc3ae"]
 [ext_resource type="Texture2D" uid="uid://bupukq6jxkvaj" path="res://Sprite Pack 8/2 - Tracy/Jump (32 x 32).png" id="5_b04lx"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ifdad"]
-atlas = ExtResource("2_h76ij")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj5j8"]
+atlas = ExtResource("2_ldbj4")
+region = Rect2(0, 354, 166, 118)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8qr43"]
-atlas = ExtResource("2_h76ij")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lyib"]
+atlas = ExtResource("2_ldbj4")
+region = Rect2(166, 354, 166, 118)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ak2hm"]
-atlas = ExtResource("2_h76ij")
-region = Rect2(64, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_78cqw"]
+atlas = ExtResource("2_ldbj4")
+region = Rect2(332, 354, 166, 118)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2qhlw"]
-atlas = ExtResource("2_h76ij")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h7gm"]
+atlas = ExtResource("2_ldbj4")
+region = Rect2(498, 354, 166, 118)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qmnng"]
-atlas = ExtResource("2_h76ij")
-region = Rect2(128, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5chr"]
+atlas = ExtResource("2_ldbj4")
+region = Rect2(664, 354, 166, 118)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_va686"]
-atlas = ExtResource("2_h76ij")
-region = Rect2(160, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_urjue"]
+atlas = ExtResource("2_ldbj4")
+region = Rect2(830, 354, 166, 118)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rnxro"]
 atlas = ExtResource("3_bvrge")
@@ -62,22 +62,22 @@ region = Rect2(0, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ifdad")
+"texture": SubResource("AtlasTexture_hj5j8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8qr43")
+"texture": SubResource("AtlasTexture_3lyib")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ak2hm")
+"texture": SubResource("AtlasTexture_78cqw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2qhlw")
+"texture": SubResource("AtlasTexture_8h7gm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qmnng")
+"texture": SubResource("AtlasTexture_r5chr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_va686")
+"texture": SubResource("AtlasTexture_urjue")
 }],
 "loop": true,
 "name": &"andando",
@@ -121,22 +121,25 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7kaw"]
-size = Vector2(14, 24)
+size = Vector2(128, 76)
 
 [node name="personagem" type="Node2D"]
 
 [node name="jogador" type="CharacterBody2D" parent="."]
-position = Vector2(-2, -5)
+position = Vector2(-1, -3)
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_1ctiq")
-metadata/_edit_group_ = true
 
 [node name="animacao" type="AnimatedSprite2D" parent="jogador"]
+position = Vector2(-9.53674e-07, 1)
 sprite_frames = SubResource("SpriteFrames_s5f3p")
-animation = &"parado"
+animation = &"andando"
 autoplay = "parado"
 
 [node name="colisao" type="CollisionShape2D" parent="jogador"]
-position = Vector2(0, 4)
+position = Vector2(8, 14)
 shape = SubResource("RectangleShape2D_l7kaw")
 
 [node name="Camera2D" type="Camera2D" parent="jogador"]
+zoom = Vector2(2, 2)
+limit_bottom = 55
